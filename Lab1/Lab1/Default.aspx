@@ -5,9 +5,14 @@
     <div class="jumbotron">
         <asp:Label class="lead" ID="Label1" runat="server" Text="Label"></asp:Label><br />
         <asp:TextBox class="lead" ID="TextBox1" runat="server">Text</asp:TextBox>
-        <asp:Button class="lead" ID="Button1" runat ="server" OnClick="Button1_Click" Text="Button" /><br />
-        <asp:DropDownList class="lead" ID="DropDownList1" runat="server"></asp:DropDownList><br />
+        <asp:Button class="lead" ID="Button1" runat ="server"  OnClick="Button1_Click" Text="Button" /><br />
+        <asp:DropDownList class="lead" ID="DropDownList1" runat="server" AutoPostBack = "true" OnSelectedIndexChanged = "OnSelectedIndexChanged">
+            <asp:ListItem>da</asp:ListItem>
+            <asp:ListItem>net</asp:ListItem>
+        </asp:DropDownList><br />
         <asp:CheckBox class="lead" ID="CheckBox1" runat="server" />
+        <asp:CheckBox class="lead" ID="CheckBox2" runat="server" />
+
 
 
     </div>
