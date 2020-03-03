@@ -1,0 +1,7 @@
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\bin\Debug\WS.exe.config
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\bin\Debug\WS.exe
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\bin\Debug\WS.pdb
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\obj\Debug\WS.csprojAssemblyReference.cache
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\obj\Debug\WS.csproj.CoreCompileInputs.cache
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\obj\Debug\WS.exe
+D:\Subject\ПИС\Lab\Lab2a (1)\WS\obj\Debug\WS.pdb

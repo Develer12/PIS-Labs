@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button width="67px" onclick="Senda()">Send</button>
+        <button width="67px" onclick="WSStart()">WSStart</button>
+        <button width="67px" onclick="WSStop()">WSStop</button>
+        <script>
+            let socket;
+            function WSStart(){
+                socket = new WebSocket('ws:/localhost:4000');
+                socket.onopen = () =>
+                {
+                    console.log('Open socket');
+                };
+                socket.onclose = (e) => {console.log('Close socket ', e)};
+                socket.onmessage = (e) => {console.log('Message socket ', e.data)};
+                socket.onerror = function(e) {alert("Error: " + error.message)};
+            }
+
+            function WSStop(){
+                socket.close();
+            }
+
+
+            function Senda(){
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:8092/yyy.ndy?a=1&b=3', true);
+                xhr.send();
+                xhr.onload = function() {
+                    if (xhr.readyState != 4) 
+                        return;
+                    if (xhr.status != 200)
+                        alert(xhr.status + ': ' + xhr.statusText);
+                    else 
+                        alert(xhr.responseText);
+                }
+            }
+        </script>
+    </body>
+</html>
