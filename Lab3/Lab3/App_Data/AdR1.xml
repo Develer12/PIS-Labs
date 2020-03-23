@@ -1,0 +1,17 @@
+﻿<Advertisements>
+  <Ad>
+    <ImageUrl>../Img/paint1.png</ImageUrl>
+    <Keyword>b1</Keyword>
+    <Impressions>50</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>../Img/paint2.png</ImageUrl>
+    <Keyword>b2</Keyword>
+    <Impressions>25</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>../Img/paint3.png</ImageUrl>
+    <Keyword>b2</Keyword>
+    <Impressions>15</Impressions>
+  </Ad>
+</Advertisements>

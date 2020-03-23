@@ -5,6 +5,7 @@
 <%-- Part 1 --%>
 
     <div class="jumbotron">
+            <h3>Part 1</h3>
             <input id="InputReset" type="reset" value="reset" onserverclick="Serv_Click" runat="server"/>
             <input id="InputButton" type="button" value="button" onserverclick="Serv_Click" runat="server"/>
             <input id="InputSubmit" type="submit" value="submit" onserverclick="Serv_Click" runat="server"/>
@@ -24,6 +25,8 @@
     </div>
 
 <%-- Part 2 --%>
+<h3>Part 1</h3>
+
     <div class="jumbotron">
         <asp:TextBox class="lead" ID="TextBoxV" runat="server" ValidationGroup="vg1">Text</asp:TextBox>
         <asp:DropDownList class="lead" ID="DropDownListV" runat="server" ValidationGroup="vg1">
@@ -137,5 +140,223 @@
             Wrong date
         </asp:RangeValidator>
     </div>
+
 <%-- Part 3 --%>
+<h3>Part 1</h3>
+
+    <div class="jumbotron">
+        <asp:MultiView ID="MV1" runat="server" ActiveViewIndex="0">
+            <asp:View ID="MV1v1" runat="server">
+                View 1
+                <asp:TextBox class="lead" ID="MV1v1T" runat="server">Da</asp:TextBox>
+                <br />
+                <asp:Button class="lead" ID="ButtMV1" OnClick="ButtMV3_Click" runat ="server" Text="Button"/>
+                <br />
+
+                    <asp:Wizard ID="Wizard1" runat="server" Width="500px"
+                         OnNextButtonClick="Wizard1_OnNextButtonClick">
+                        <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="Black" />
+                        <SideBarStyle BorderWidth="0px" Font-Size="0.9em" VerticalAlign="Top" />
+                        <StepStyle BorderWidth="0px" ForeColor="Black" />
+                        <WizardSteps>
+                            <asp:WizardStep ID="WizardStep1" runat="server" Title="TextBox">
+                                <div style="background-image: url(Img/back.png)">
+                                <table class="bgwizard" style="min-width: 500px; min-height: 500px;">
+                                    <tr>
+                                        <td>Textbox</td>
+                                        <td>
+                                            <asp:TextBox runat="server" ID="WizardTextbox"></asp:TextBox></td>
+                                    </tr>
+                                </table>
+                                <</div>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="RadioButtonList">
+                                <table>
+                                    <tr>
+                                        <td>RadioButtonList</td>
+                                        <td>
+                                            <asp:RadioButtonList runat="server" ID="WizardRadioButtonList">
+                                                <asp:ListItem Selected="True" Text="Variant 1" Value="Variant 1" />
+                                                <asp:ListItem Selected="False" Text="Variant 2" Value="Variant 2" />
+                                                <asp:ListItem Selected="False" Text="Variant 3" Value="Variant 3" />
+                                                <asp:ListItem Selected="False" Text="Variant 4" Value="Variant 4" />
+                                                <asp:ListItem Selected="False" Text="Variant 5" Value="Variant 5" />
+                                            </asp:RadioButtonList></td>
+                                    </tr>
+                                </table>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="CheckBoxList">
+                                <table>
+                                    <tr>
+                                        <td>CheckBoxList</td>
+                                        <td>
+                                            <asp:CheckBoxList runat="server" ID="WizardCheckBoxList">
+                                                <asp:ListItem Selected="True" Text="Variant 1" Value="Variant 1" />
+                                                <asp:ListItem Selected="False" Text="Variant 2" Value="Variant 2" />
+                                                <asp:ListItem Selected="False" Text="Variant 3" Value="Variant 3" />
+                                                <asp:ListItem Selected="False" Text="Variant 4" Value="Variant 4" />
+                                                <asp:ListItem Selected="False" Text="Variant 5" Value="Variant 5" />
+                                            </asp:CheckBoxList></td>
+                                    </tr>
+                                </table>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="ListBox">
+                                <table>
+                                    <tr>
+                                        <td>ListBox</td>
+                                        <td>
+                                            <asp:ListBox runat="server" ID="WizardListBox">
+                                                <asp:ListItem Text="Variant 1" Value="Variant 1" />
+                                                <asp:ListItem Text="Variant 2" Value="Variant 2" />
+                                                <asp:ListItem Text="Variant 3" Value="Variant 3" />
+                                                <asp:ListItem Text="Variant 4" Value="Variant 4" />
+                                                <asp:ListItem Text="Variant 5" Value="Variant 5" />
+                                            </asp:ListBox></td>
+                                    </tr>
+                                </table>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="Calendar">
+                                <table>
+                                    <tr>
+                                        <td>ListBox</td>
+                                        <td>
+                                            <asp:Calendar runat="server" ID="WizardCalendar"></asp:Calendar>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="Calendars">
+                                <table>
+                                    <tr>
+                                        <td>ListBox</td>
+                                        <td>
+                                            <asp:Calendar runat="server" ID="WizardCalendars" OnDayRender="Calendars_DayRender" OnSelectionChanged="WizardCalendars_OnSelectionChanged"></asp:Calendar>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:WizardStep>
+                            <asp:WizardStep runat="server" Title="Result">
+                                <asp:Label runat="server" ID="WizardResult"></asp:Label>
+                            </asp:WizardStep>
+
+
+                        </WizardSteps>
+                        <SideBarStyle VerticalAlign="Top" />
+
+                    </asp:Wizard>
+            </asp:View>
+            <asp:View ID="MV1v2" runat="server">
+                View 2
+                <asp:TextBox class="lead" ID="MV1v2T" runat="server">Da</asp:TextBox>
+                <br />
+                <asp:Button class="lead" ID="ButtMV2" OnClick="ButtMV3_Click" runat ="server" Text="Button"/>
+            </asp:View>
+            <asp:View ID="MV1v3" runat="server">
+                View 3
+                <asp:TextBox class="lead" ID="MV1v3T" runat="server">Da</asp:TextBox>
+                <br />
+                <asp:Button class="lead" ID="ButtMV3" OnClick="ButtMV3_Click" runat ="server" Text="Button"/>
+            </asp:View>
+        </asp:MultiView>
+    </div>
+
+    <div class="jumbotron">
+        <asp:AdRotator ID="adR1" runat="server" AdvertisementFile="~/App_Data/AdR1.xml" Height="100%" Width="100%" />
+        <asp:Button class="lead" ID="AdButt" OnClick="AdButt_Click" runat ="server" Text="-> b1"/>
+    </div>
+
+    <div class="jumbotron">
+        <asp:TreeView ID="TreeView" runat="server" ShowLines="True" OnSelectedNodeChanged="TreeView_OnSelectedNodeChanged">
+                    <Nodes>
+                        <asp:TreeNode Expanded="True" Text="1" Value="1" ShowCheckBox="False">
+                            <asp:TreeNode Text="1.1" Value="1.1">
+                                <asp:TreeNode ShowCheckBox="True" Text="1.1.1" Value="1.1.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.1.2" Value="1.1.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.1.3" Value="1.1.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode ImageUrl="../Images/mango.jpg" Value="1.2">
+                                <asp:TreeNode ShowCheckBox="True" Text="1.2.1" Value="1.2.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.2.2" Value="1.2.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.2.3" Value="1.2.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="1.3" Value="1.3">
+                                <asp:TreeNode ShowCheckBox="True" Text="1.3.1" Value="1.3.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.3.2" Value="1.3.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="1.3.3" Value="1.3.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Expanded="True" Text="2" Value="2" ShowCheckBox="False">
+                            <asp:TreeNode ShowCheckBox="True" Text="2.1" Value="2.1">
+                                <asp:TreeNode ShowCheckBox="True" Text="2.1.1" Value="2.1.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.1.2" Value="2.1.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.1.3" Value="2.1.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode ShowCheckBox="True" Text="2.2" Value="2.2">
+                                <asp:TreeNode ShowCheckBox="True" Text="2.2.1" Value="2.2.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.2.2" Value="2.2.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.2.3" Value="2.2.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode ShowCheckBox="True" Text="2.3" Value="2.3" ImageUrl="Img/back.png">
+                                <asp:TreeNode ShowCheckBox="True" Text="2.3.1" Value="2.3.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.3.2" Value="2.3.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="2.3.3" Value="2.3.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Expanded="True" Text="3" ToolTip="Узел 3" Value="3" ShowCheckBox="False">
+                            <asp:TreeNode Text="3.1" ToolTip="Узел 3.1" Value="3.1">
+                                <asp:TreeNode ShowCheckBox="True" Text="3.1.1" Value="3.1.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.1.2" Value="3.1.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.1.3" Value="3.1.3"></asp:TreeNode>
+                                </asp:TreeNode>
+                            <asp:TreeNode Text="3.2" ToolTip="Узел 3.2" Value="3.2">
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.1" Value="3.2.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.2" Value="3.2.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.3" Value="3.2.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="3.3" ToolTip="Узел 3.3" Value="3.3">
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.1" Value="3.2.1"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.2" Value="3.2.2"></asp:TreeNode>
+                                <asp:TreeNode ShowCheckBox="True" Text="3.2.3" Value="3.2.3"></asp:TreeNode>
+                            </asp:TreeNode>
+                        </asp:TreeNode>
+                    </Nodes>
+                </asp:TreeView>
+                <asp:Button runat="server" ID="TreeViewButton" OnClick="TreeViewButton_OnClick" Text="save"/>
+                <asp:Label runat="server" ID="TreeViewResult"></asp:Label>
+
+    </div>
+
+    <div class="jumbotron">
+        <asp:Menu runat="server" ID="Menu" CssClass="menuclass" StaticDisplayLevels="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" OnMenuItemClick="Menu_itemClick">
+                    <Items>
+                        <asp:MenuItem Text="Var 1">
+                            <asp:MenuItem Text="Var 1.1" Value="Var 1.1">
+                                    <asp:MenuItem Text="1.1.1" Value="1.1.1"></asp:MenuItem>
+                                    <asp:MenuItem Text="1.1.2" Value="1.1.2"></asp:MenuItem>
+                                    <asp:MenuItem Text="1.1.3" Value="1.1.3"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Var 1.2" Value="Var 1.2">
+                                <asp:MenuItem Text="1.2.1" Value="1.2.1"></asp:MenuItem>
+                                <asp:MenuItem Text="1.2.2" Value="1.2.2"></asp:MenuItem>
+                                <asp:MenuItem Text="1.2.3" Value="1.2.3"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Var 1.3" Value="Var 1.3"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Var 2">
+                            <asp:MenuItem Text="Var 2.1" Value="Var 2.1">
+                                <asp:MenuItem Text="2.1.1" Value="2.1.1"></asp:MenuItem>
+                                <asp:MenuItem Text="2.1.2" Value="2.1.2"></asp:MenuItem>
+                                <asp:MenuItem Text="2.1.3" Value="2.1.3"></asp:MenuItem>
+                            </asp:MenuItem>         
+                            <asp:MenuItem Text="Var 2.2" Value="Var 2.2">
+                                <asp:MenuItem Text="2.2.1" Value="2.2.1"></asp:MenuItem>
+                                <asp:MenuItem Text="2.2.2" Value="2.2.2"></asp:MenuItem>
+                                <asp:MenuItem Text="2.2.3" Value="2.2.3"></asp:MenuItem>
+                            </asp:MenuItem>   
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Label runat="server" ID="MenuResult"></asp:Label>
+    </div>
+
 </asp:Content>
