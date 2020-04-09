@@ -13,6 +13,7 @@ public partial class _Default : Page
     HtmlTableRow tr;
     HtmlTableCell tc;
 
+
     protected void Page_Load(object sender, EventArgs e)
     {
         t.Border = 1;
@@ -35,6 +36,8 @@ public partial class _Default : Page
         tc = new HtmlTableCell(); tc.InnerHtml = "Control"; tr.Cells.Add(tc);
         t.Rows.Add(tr);
         this.Controls.Add(t);
+
+
     }
 
     //PART 1
@@ -266,4 +269,64 @@ public partial class _Default : Page
     {
         this.MenuResult.Text = ((Menu)sender).SelectedValue;
     }
+
+
+
+
+
+    //PART 4
+
+    private static int timer1inc = 0;
+    private static int timer2inc = 0;
+
+    protected void Button1_OnClick(object sender, EventArgs e)
+    {
+        switch (Radio1.SelectedValue)
+        {
+            case "1":
+                {
+                    if (CheckBox1.Checked) Label1.Text = DateTime.Now.ToLongDateString();
+                    else Label1.Text = DateTime.Now.ToShortDateString();
+                    break;
+                }
+            case "2":
+                {
+                    if (CheckBox1.Checked) Label1.Text = DateTime.Now.ToLongTimeString();
+                    else Label1.Text = DateTime.Now.ToShortTimeString();
+                    break;
+                }
+        }
+    }
+
+    protected void Timer1_Tick(object sender, EventArgs e)
+    {
+        Label3.Text = timer1inc++.ToString();
+    }
+
+    protected void Timer2_Tick(object sender, EventArgs e)
+    {
+        Label4.Text = timer2inc++.ToString();
+    }
+
+    protected void Button2_OnClick(object sender, EventArgs e)
+    {
+        Random rand = new Random();
+
+        int randInt = rand.Next(0, 1);
+
+        if (randInt == 0)
+        {
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(15));
+            TextBox8.Text = "YES";
+
+        }
+
+        //else
+        //{
+        //   throw new Exception("error");
+        //}
+
+    }
+
+
 }
