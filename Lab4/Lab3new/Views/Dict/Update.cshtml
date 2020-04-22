@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="jumbotron">
+        <h3>Update</h3>
+        @using (Html.BeginForm("Update", "Dict", FormMethod.Post))
+        {
+            <div>
+                <p>Id:      <input type="number" id="id" name="id" min="0" width="200"></p>
+                <p>Surname: <input type="text" id="surname" name="surname" width="230" /></p>
+                <p>Number:  <input type="number" id="number" name="number" min="0" max="999999999" width="300"></p>
+                <p><input type="submit"></p>
+            </div>
+        }
+    </div>
+</body>
+</html>
