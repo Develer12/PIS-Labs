@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="jumbotron">
+        <h3>Add</h3>
+        @using (Html.BeginForm("Add", "Dict", FormMethod.Post))
+        {
+            <div>
+                <p>Surname: <input type="text" id="surname" name="surname" /></p>
+                <p>Number: <input type="number" id="number" name="number" min="0" max="999999999"></p>
+                <p><input type="submit"></p>
+            </div>
+        }
+    </div>
+</body>
+</html>

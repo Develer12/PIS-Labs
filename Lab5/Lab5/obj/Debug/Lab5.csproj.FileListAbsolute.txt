@@ -93,8 +93,8 @@ D:\Subject\ПИС\Lab\Lab5\Lab5\bin\ru\System.Web.Razor.resources.dll
 D:\Subject\ПИС\Lab\Lab5\Lab5\bin\ru\System.Web.WebPages.resources.dll
 D:\Subject\ПИС\Lab\Lab5\Lab5\bin\ru\System.Web.WebPages.Deployment.resources.dll
 D:\Subject\ПИС\Lab\Lab5\Lab5\bin\ru\System.Web.WebPages.Razor.resources.dll
-D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.csprojAssemblyReference.cache
 D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
 D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.csproj.CopyComplete
 D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.dll
 D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.pdb
+D:\Subject\ПИС\Lab\Lab5\Lab5\obj\Debug\Lab5.csprojAssemblyReference.cache

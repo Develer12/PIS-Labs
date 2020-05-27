@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="jumbotron">
+        <h3>Delete</h3>
+        @using (Html.BeginForm("Delete", "Dict", FormMethod.Post))
+        {
+            <div>
+                <p>Enter id:<input type="number" id="id" name="id" min="1"></p>
+                <p><input type="submit"></p>
+            </div>
+        }
+    </div>
+</body>
+</html>

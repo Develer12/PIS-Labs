@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+    List<TelephoneDll.Telephone> telephones = ViewBag.selectAll;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body>
+    <div class="jumbotron" style="width:100%; display:flex; flex-direction: column; justify-content: center;">
+        <table border="1" style="margin: 0 20% 0 20%; width:60%; text-align: center;">
+            <thead>
+                <tr>
+                    <th style="text-align: center">Id</th>
+                    <th style="text-align: center">Surnames</th>
+                    <th style="text-align: center">Telephone Numbers</th>
+                </tr>
+            </thead>
+            <tbody style="overflow-y: auto; overflow-x: hidden; height: 85%;">
+                @foreach (TelephoneDll.Telephone telephone in telephones)
+                {
+                    <tr>
+                        <td>@telephone.id</td>
+                        <td>@telephone.surname</td>
+                        <td>@telephone.number</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div style="margin: 0 35% 0 35%; display:flex;flex-direction: row; justify-content: space-between; width: 30%" >
+            <span style="margin: 50px 0px 50px 0px">@Html.ActionLink("Add", "Add")</span>
+            <span style="margin: 50px 0px 50px 0px">@Html.ActionLink("Update", "Update")</span>
+            <span style="margin: 50px 0px 50px 0px">@Html.ActionLink("Delete", "Delete")</span>
+        </div>
+    </div>
+</body>
+</html>
