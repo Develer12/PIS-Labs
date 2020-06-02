@@ -7,3 +7,12 @@ D:\Subject\ПИС\Lab\Lab6n\TelephoneDll\obj\Debug\TelephoneDll.csproj.CoreCompi
 D:\Subject\ПИС\Lab\Lab6n\TelephoneDll\obj\Debug\TelephoneDll.csproj.CopyComplete
 D:\Subject\ПИС\Lab\Lab6n\TelephoneDll\obj\Debug\TelephoneDll.dll
 D:\Subject\ПИС\Lab\Lab6n\TelephoneDll\obj\Debug\TelephoneDll.pdb
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\bin\Debug\TelephoneDll.dll
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\bin\Debug\TelephoneDll.pdb
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\bin\Debug\Newtonsoft.Json.dll
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\bin\Debug\Newtonsoft.Json.xml
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\obj\Debug\TelephoneDll.csprojAssemblyReference.cache
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\obj\Debug\TelephoneDll.csproj.CoreCompileInputs.cache
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\obj\Debug\TelephoneDll.csproj.CopyComplete
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\obj\Debug\TelephoneDll.dll
+D:\Subject\ПИС\Lab\Lab6json\TelephoneDll\obj\Debug\TelephoneDll.pdb

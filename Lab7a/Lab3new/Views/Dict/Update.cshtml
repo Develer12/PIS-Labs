@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="jumbotron">
+        <h3>Add</h3>
+        <div>
+            <p>Id:      <input type="number" id="id" name="id" min="0" width="200"></p>
+            <p>Surname: <input type="text" id="surname" name="surname" /></p>
+            <p>Number: <input type="number" id="number" name="number" min="0" max="999999999"></p>
+            <p><input type="submit" onclick="Up()"></p>
+        </div>
+    </div>
+
+    <script>
+        let Up = () => {
+            fetch('/api/WebApi/Put', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: document.getElementById('id').value,
+                    surname: document.getElementById('surname').value,
+                    number: document.getElementById('number').value
+                })
+            })
+            .then(res => {
+                if (res) {
+                    window.location.replace("/");
+                }
+            })
+            .catch((err) => console.log(`Fetch ERROR by ${LINK}: ${err}`));
+        }
+    </script>
+</body>
+</html>

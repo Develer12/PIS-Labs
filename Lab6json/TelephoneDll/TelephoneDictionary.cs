@@ -20,7 +20,7 @@ namespace TelephoneDll
 
         public List<Telephone> selectAll()
         {
-            string jsonString = File.ReadAllText("D:\\Subject\\ПИС\\Lab\\Lab6n\\Lab3new\\App_Data\\numbers.json");
+            string jsonString = File.ReadAllText("D:\\Subject\\ПИС\\Lab\\Lab6json\\Lab3new\\App_Data\\numbers.json");
             this.telephones = JsonConvert.DeserializeObject<List<Telephone>>(jsonString).ToList();
             return telephones.OrderBy(u => u.surname).ToList();
         }
@@ -66,7 +66,7 @@ namespace TelephoneDll
         public void saveChange(List<Telephone> telephones)
         {
             string jsonString = JsonConvert.SerializeObject(telephones);
-            File.WriteAllText("D:\\Subject\\ПИС\\Lab\\Lab6n\\Lab3new\\App_Data\\numbers.json", jsonString);
+            File.WriteAllText("D:\\Subject\\ПИС\\Lab\\Lab6json\\Lab3new\\App_Data\\numbers.json", jsonString);
         }
     }
 }

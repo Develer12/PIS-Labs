@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="jumbotron">
+        <h3>Add</h3>
+            <div>
+                <p>Surname: <input type="text" id="surname" name="surname" /></p>
+                <p>Number: <input type="number" id="number" name="number" min="0" max="999999999"></p>
+                <p><input type="submit" onclick="Add()"></p>
+            </div>
+    </div>
+
+    <script>
+        let Add = () => {
+            console.log(Number.parseInt(document.getElementById('number').value))
+            console.log(document.getElementById('number').value)
+
+            fetch('/api/WebApi/Post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    surname: document.getElementById('surname').value,
+                    number: document.getElementById('number').value
+                })
+            })
+            .then(res => {
+                if (res) {
+                    window.location.replace("/");
+                }
+            })
+            .catch((err) => console.log(`Fetch ERROR by ${LINK}: ${err}`));
+        }
+    </script>
+</body>
+</html>
