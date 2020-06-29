@@ -29,7 +29,7 @@ namespace Lab7b
         private void Post_Click(object sender, EventArgs e)
         {
             string name = this.name.Text;
-            int number = Convert.ToInt32(this.name.Text);
+            int number = Convert.ToInt32(this.num.Text);
 
             if (this.client.AddDict(name, number) == "OK")
             {
@@ -44,7 +44,7 @@ namespace Lab7b
         private void Put_Click(object sender, EventArgs e)
         {
             string name = this.name.Text;
-            int number = Convert.ToInt32(this.name.Text);
+            int number = Convert.ToInt32(this.num.Text);
             int id = Convert.ToInt32(this.id.Text);
 
             if (this.client.UpdDict(id, name, number) == "OK")

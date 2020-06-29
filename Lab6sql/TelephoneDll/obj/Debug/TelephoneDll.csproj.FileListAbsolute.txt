@@ -65,3 +65,4 @@ D:\Subject\ПИС\Lab\Lab6sql\TelephoneDll\obj\Debug\TelephoneDll.csproj.CoreCom
 D:\Subject\ПИС\Lab\Lab6sql\TelephoneDll\obj\Debug\TelephoneDll.csproj.CopyComplete
 D:\Subject\ПИС\Lab\Lab6sql\TelephoneDll\obj\Debug\TelephoneDll.dll
 D:\Subject\ПИС\Lab\Lab6sql\TelephoneDll\obj\Debug\TelephoneDll.pdb
+D:\Subject\ПИС\Lab\Lab6sql\TelephoneDll\obj\Debug\TelephoneDll.csprojAssemblyReference.cache
