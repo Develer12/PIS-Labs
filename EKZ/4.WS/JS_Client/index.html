@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button width="67px" onclick="WSStart()">WSStart</button>
+        <button width="67px" onclick="WSStop()">WSStop</button>
+        <script>
+            let socket;
+            function WSStart(){
+                socket = new WebSocket('ws:/localhost:4000');
+                socket.onopen = () =>
+                {
+                    console.log('Open socket');
+                };
+                socket.onclose = (e) => {console.log('Close socket ', e)};
+                socket.onmessage = (e) => {console.log('Message socket ', e.data)};
+                socket.onerror = function(e) {alert("Error: " + error.message)};
+            }
+
+            function WSStop(){
+                socket.close();
+            }
+
+        </script>
+    </body>
+</html>

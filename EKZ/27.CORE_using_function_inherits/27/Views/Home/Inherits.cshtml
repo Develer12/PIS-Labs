@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Inherits";
+
+}
+@inherits _27.Controllers.HomeController.CustomRazorPage<TModel>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>27</title>
+</head>
+<body>
+    <div>Custom text: @CustomText</div>
+    <a asp-controller="Home" asp-action="Index">Index</a>
+</body>
+</html>

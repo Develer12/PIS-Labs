@@ -1,0 +1,12 @@
+﻿@model MVC_26.Controllers.HomeController.City
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        @Html.ListBoxFor(city => city.CityName, new SelectList(new string[] {"Минск", "Брест", "Гомель", "Могилев", "Гродно"}))
+
+    </body>
+</html>

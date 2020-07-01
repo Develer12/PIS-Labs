@@ -1,0 +1,21 @@
+﻿@using WebApplication1.Helpers
+@{
+    Layout = null;
+    ViewData["Title"] = "HelperMethod1";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Helpers</title>
+</head>
+<body>
+    <h3>Before @@Html.Customer("Twenty", "Home", new { method = "GET" })</h3>
+    
+    @Html.Customer("Twenty", "VDemo", new { method = "GET" })
+
+    <h3>After Customer("Twenty", "Home", new { method = "GET" })</h3>
+    
+    <img src="@Url.PhotoURI("svv.jpg")" width="200" height="100"/>
+</body>
+</html>
+

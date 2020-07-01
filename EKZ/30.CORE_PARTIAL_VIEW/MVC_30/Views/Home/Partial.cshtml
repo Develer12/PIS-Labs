@@ -1,0 +1,7 @@
+﻿<h2>Частичное представление</h2>
+@{
+    string[] cities = new string[] { "Лондон", "Париж", "Берлин" };
+}
+<h3>Города</h3>
+@Html.ListBox("cities",new MultiSelectList(cities))  
+

@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = null;
+    ViewData["Title"] = "HelperMethod2";
+}
+
+<body>
+    @*Этот код будет рендериться в html-разметку (т.е. создастся форма и два инпута)*@
+    @using (Html.BeginForm("A21", "Home", FormMethod.Post))
+    {
+        <p>
+            <label>Name</label> @Html.TextBox("Name")
+        </p>
+        <p>
+            <label>Surname</label> @Html.TextBox("Surname")
+        </p>
+    }
+</body>
+

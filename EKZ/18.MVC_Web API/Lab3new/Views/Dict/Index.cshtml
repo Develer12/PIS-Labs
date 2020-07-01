@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @Styles.Render("~/Content/css")
+
+</head>
+<body onload="Get()">
+    <p>Result in console</p>
+    <script>
+        let Get = () => {
+            fetch('/api/WebApi', { method: 'GET' })
+                .then(res => res.text()).then(res => {
+                    console.log(res);
+            })
+            .catch((err) => console.log(err));
+        }
+    </script>
+</body>
+</html>

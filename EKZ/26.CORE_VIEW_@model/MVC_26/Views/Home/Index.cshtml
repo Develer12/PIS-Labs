@@ -1,0 +1,14 @@
+﻿@model List<string>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @foreach(string s in Model) 
+    {
+        @s <br/>
+    }
+</body>
+</html>

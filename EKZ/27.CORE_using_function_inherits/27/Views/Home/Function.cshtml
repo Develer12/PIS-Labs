@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Function";
+}
+
+@functions {
+    public string GetHello()
+    {
+        return "Hello";
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>27</title>
+</head>
+<body>
+    <div>From method: @GetHello()</div>
+    <a asp-controller="Home" asp-action="Index">Index</a>
+</body>
+</html>
